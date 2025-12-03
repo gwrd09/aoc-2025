@@ -15,7 +15,7 @@ def searchRange(range_input):
     invalid_id_list = []
      
     for i in range(int(ranges[0]), int(ranges[1]) + 1):
-        pattern = re.compile(r"^(\d+)\1$")
+        pattern = re.compile(r"^(\d+)\1+$")
         if pattern.search(str(i)):
             invalid_id_list.append(i)
 
